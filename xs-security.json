@@ -1,0 +1,27 @@
+{
+  "xsappname": "authrouter",
+  "tenant-mode": "dedicated",
+  "description": "Security profile of called application",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.authNewPatty",
+      "description": "authNewPatty"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "authNewPatty",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.authNewPatty"
+      ],
+      "attribute-references": []
+    }
+  ],
+  "oauth2-configuration": {
+    "redirect-uris": [
+      "https://0a49b79ctrial-tests-authnewjson.cfapps.us10.hana.ondemand.com/login/callback"
+    ]
+  }
+}
